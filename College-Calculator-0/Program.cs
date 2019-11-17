@@ -11,6 +11,7 @@ namespace College_Calculator_0
         static void Main()
         {
             Console.WriteLine("This program will add two numbers together\nand perfrom an operation of your choosing.");
+            Console.WriteLine();
 
             //Explaining Operation
             Console.WriteLine("Select your operation.");
@@ -21,7 +22,6 @@ namespace College_Calculator_0
             Console.WriteLine("5: Power (First Number to the Power of the Second Number)");
             Console.WriteLine("6: Square Root (Only Takes First Number)");
             Console.WriteLine();
-            Console.WriteLine("Enter Selection:");
 
             //Varaibles
             byte operation = 0;
@@ -29,12 +29,17 @@ namespace College_Calculator_0
             try
             {
                 //Inputs
+                Console.WriteLine("Enter Selection:");
                 operation = Convert.ToByte(Console.ReadLine());
+                Console.WriteLine();
 
                 Console.WriteLine("Enter First Number:");
                 num1 = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine();
+
                 Console.WriteLine("Enter Second Number:");
                 num2 = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine();
             }
             
             catch (System.FormatException)
@@ -43,7 +48,7 @@ namespace College_Calculator_0
                 Restart();
             }
 
-            //
+            //Variable that holds the operator.
             char operatorSymbol = '0';
 
             //Selecting operation and performing it.
@@ -97,7 +102,7 @@ namespace College_Calculator_0
             else
             {
                 //Output in the form of num1 operator num2 = result.
-                Console.WriteLine("{0} {1} {2} = {3}");
+                Console.WriteLine("{0} {1} {2} = {3}", num1, operatorSymbol, num2, result);
             }
 
             Restart();

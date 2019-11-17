@@ -10,7 +10,7 @@ namespace College_Calculator_0
     {
         static void Main()
         {
-            Console.WriteLine("This program will add two numbers together and perfrom an operation of your choosing.");
+            Console.WriteLine("This program will add two numbers together\nand perfrom an operation of your choosing.");
 
             //Explaining Operation
             Console.WriteLine("Select your operation.");

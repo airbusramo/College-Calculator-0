@@ -18,14 +18,14 @@ namespace College_Calculator_0
             Console.WriteLine("2: Subtraction");
             Console.WriteLine("3: Multiplication");
             Console.WriteLine("4: Division");
-            Console.WriteLine("5: Power");
+            Console.WriteLine("5: Power (First Number to the Power of the Second Number)");
             Console.WriteLine("6: Square Root (Only Takes First Number)");
             Console.WriteLine();
             Console.WriteLine("Enter Selection:");
 
-            //Varaibles for try catch.
+            //Varaibles
             byte operation = 0;
-            double num1 = 0, num2 = 0;
+            double num1 = 0, num2 = 0, result;
             try
             {
                 //Inputs
@@ -39,11 +39,48 @@ namespace College_Calculator_0
             
             catch (System.FormatException)
             {
-                Console.WriteLine("Invailid Input.");
+                Console.WriteLine("Invalid Input.");
                 Restart();
             }
 
-            
+            //Selecting operation and performing it.
+            switch (operation)
+            {
+                case 1:
+                    //Addition
+                    result = num1 + num2;
+                    break;
+                
+                case 2:
+                    //Subtraction
+                    result = num1 - num2;
+                    break;
+
+                case 3:
+                    //Multiplication
+                    result = num1 * num2;
+                    break;
+
+                case 4:
+                    //Division
+                    result = num1 / num2;
+                    break;
+
+                case 5:
+                    //Power
+                    result = Math.Pow(num1, num2);
+                    break;
+                case 6:
+                    //Square Root
+                    result = Math.Sqrt(num1);
+                    break;
+
+                default:
+                    Console.WriteLine("Something went wrong.");
+                    Restart();
+                    break;
+            }
+
         }
 
         //Method for restarting the program.

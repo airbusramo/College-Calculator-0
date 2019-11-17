@@ -25,7 +25,7 @@ namespace College_Calculator_0
 
             //Varaibles
             byte operation = 0;
-            double num1 = 0, num2 = 0, result;
+            double num1 = 0, num2 = 0, result = 0;
             try
             {
                 //Inputs
@@ -43,35 +43,44 @@ namespace College_Calculator_0
                 Restart();
             }
 
+            //
+            char operatorSymbol = '0';
+
             //Selecting operation and performing it.
             switch (operation)
             {
                 case 1:
                     //Addition
+                    operatorSymbol = '+';
                     result = num1 + num2;
                     break;
                 
                 case 2:
                     //Subtraction
+                    operatorSymbol = '-';
                     result = num1 - num2;
                     break;
 
                 case 3:
                     //Multiplication
+                    operatorSymbol = '*';
                     result = num1 * num2;
                     break;
 
                 case 4:
                     //Division
+                    operatorSymbol = '/';
                     result = num1 / num2;
                     break;
 
                 case 5:
                     //Power
+                    operatorSymbol = '^';
                     result = Math.Pow(num1, num2);
                     break;
                 case 6:
                     //Square Root
+                    operatorSymbol = 'r';
                     result = Math.Sqrt(num1);
                     break;
 
@@ -81,6 +90,17 @@ namespace College_Calculator_0
                     break;
             }
 
+            if (operatorSymbol == 'r')
+            {
+                Console.WriteLine("The square root of {0} is {1}.", num1, result);
+            }
+            else
+            {
+                //Output in the form of num1 operator num2 = result.
+                Console.WriteLine("{0} {1} {2} = {3}");
+            }
+
+            Restart();
         }
 
         //Method for restarting the program.

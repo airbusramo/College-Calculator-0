@@ -121,12 +121,14 @@ namespace College_Calculator_0
                 switch (char.ToLower(restartInput))
                 {
                     case 'y':
+                        Console.WriteLine();
                         Main();
                         break;
                     case 'n':
                         End();
                         break;
                     default:
+                        Console.WriteLine();
                         Console.WriteLine("Invaild Input");
                         Restart();
                         break;

@@ -43,6 +43,14 @@ namespace College_Calculator_0
                     num2 = Convert.ToDouble(Console.ReadLine());
                     Console.WriteLine();
                 }
+                else
+                {
+                    if (num1 < 0)
+                    {
+                        Console.WriteLine("Negative square roots not supported.");
+                        Restart();
+                    }
+                }
             }
             
             catch (System.FormatException)

@@ -37,9 +37,12 @@ namespace College_Calculator_0
                 num1 = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine();
 
-                Console.WriteLine("Enter Second Number:");
-                num2 = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine();
+                if (operation != 6)
+                {
+                    Console.WriteLine("Enter Second Number:");
+                    num2 = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine();
+                }
             }
             
             catch (System.FormatException)

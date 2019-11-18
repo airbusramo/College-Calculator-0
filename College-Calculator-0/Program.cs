@@ -10,7 +10,7 @@ namespace College_Calculator_0
     {
         static void Main()
         {
-            Console.WriteLine("This program will add two numbers together\nand perfrom an operation of your choosing.");
+            Console.WriteLine("This program takes two numbers and perfrom an operation of your choosing.");
             Console.WriteLine();
 
             //Explaining Operation
@@ -44,7 +44,16 @@ namespace College_Calculator_0
             
             catch (System.FormatException)
             {
-                Console.WriteLine("Invalid Input.");
+                Console.WriteLine();
+                Console.WriteLine("Invalid Input: Unexpected Input Type");
+                Console.WriteLine("Check for a non-numeric value in your inputs.");
+                Restart();
+            }
+            catch (System.OverflowException)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Invalid Input: Overflow");
+                Console.WriteLine("One of your inputs is out of its range. You probably cause an overflow in the \noperator selector or just have a massive number as an input.");
                 Restart();
             }
 
